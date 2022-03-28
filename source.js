@@ -571,6 +571,9 @@ const get_comments = (list_name_of_card, card_name, id_of_card, desc_data) => {
 
                 recreate_description(list_name_of_card, card_name, desc_data, id_of_card, comment_data)
             }
+            else if (desc_data == '' && comment_data != []) {
+                recreate_description(list_name_of_card, card_name, desc_data, id_of_card, comment_data)   
+            }
         })
         .catch(err => console.log(err))
 }
